@@ -30,10 +30,13 @@ h1 {
 }
 
 .lower-sections {
-    width: 100%;
     display: flex;
-    justify-content: space-between; /* Align Last Race on left, Driver Standings in the middle, Constructor Standings on right */
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    justify-content: space-between; /* Add space between boxes */
+    gap: 20px; /* Add spacing between the boxes */
     padding-top: 20px;
+    margin: 0 auto; /* Center content */
+    max-width: 1200px; /* Limit maximum width */
 }
 
 .next-race {
@@ -44,29 +47,16 @@ h1 {
     text-align: center;
 }
 
-.last-race {
-    width: 30%; /* Place it on the left */
+.last-race, .driver-standings, .standings {
+    flex: 1 1 30%; /* Allow boxes to grow, shrink, and set a base width */
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
     text-align: center;
+    box-sizing: border-box; /* Include padding and border in size calculation */
+    transition: all 0.3s ease; /* Smooth resize transition */
 }
 
-.driver-standings {
-    width: 30%; /* Center the driver standings */
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-.standings {
-    width: 30%; /* Place it on the right */
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
 
 table {
     width: 100%;
@@ -87,6 +77,8 @@ button {
     border: none;
     cursor: pointer;
     margin-top: 10px;
+    width: 100%;
+    max-width: 200px;
 }
 
 button:hover {
@@ -99,6 +91,7 @@ footer {
     padding: 10px;
     text-align: center;
 }
+
 /* Modal Styles */
 #full-results-modal {
     display: none; /* Hidden by default */
@@ -169,7 +162,22 @@ footer {
     margin-right: 10px; /* Add space between label and dropdown */
 }
 
+@media (max-width: 1024px) {
+    .lower-sections {
+        flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    }
 
+    .last-race, .driver-standings, .standings {
+        flex: 1 1 45%; /* Boxes take 45% width on medium screens */
+    }
+}
 
+@media (max-width: 768px) {
+    .last-race, .driver-standings, .standings {
+        flex: 1 1 100%; /* Boxes stack vertically on small screens */
+    }
 
-
+    button {
+        width: 100%; /* Buttons stretch to full width */
+    }
+}
