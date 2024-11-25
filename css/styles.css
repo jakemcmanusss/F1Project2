@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.header-bar {
+    background-color: #E03D2D;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    align-items: center;
+    padding: 20px;
+}
+
+.upper-sections {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center Next Race */
+}
+
+.lower-sections {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Align Last Race on left, Driver Standings in the middle, Constructor Standings on right */
+    padding-top: 20px;
+}
+
+.next-race {
+    width: 50%; /* Make it centered */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.last-race {
+    width: 30%; /* Place it on the left */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.driver-standings {
+    width: 30%; /* Center the driver standings */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.standings {
+    width: 30%; /* Place it on the right */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+footer {
+    background-color: #E03D2D;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+/* Modal Styles */
+#full-results-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 50%; /* Center the modal */
+    top: 50%; /* Center the modal */
+    width: 50%; /* Modal width */
+    max-height: 80%; /* Modal height */
+    transform: translate(-50%, -50%); /* Centering */
+    background-color: white; /* Modal background color */
+    border: 1px solid #ccc; /* Modal border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Modal shadow */
+    overflow-y: auto; /* Scrollable if needed */
+    padding: 20px; /* Padding inside the modal */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Overlay styles */
+.modal-overlay {
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit behind the modal */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+.close-button {
+    background-color: #e03d2d; /* Color to match your theme */
+    color: white;
+    padding: 10px 20px; /* Add padding for the button */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    float: right; /* Align to the right */
+    font-size: 16px; /* Font size */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.close-button:hover {
+    background-color: #c02e23; /* Darker color on hover */
+}
+
+.simulation-container {
+    text-align: center; /* Center text */
+    margin: 20px; /* Margin around the section */
+    border: 1px solid #ccc; /* Optional border */
+    padding: 20px; /* Padding inside */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+}
+
+
+.simulation-result {
+    text-align: center; /* Center text */
+    margin: 20px 0; /* Add some margin for spacing */
+    line-height: 1.5; /* Add space between lines */
+}
+.driver-selection {
+    display: flex; /* Use flexbox to align items in a row */
+    align-items: center; /* Center items vertically */
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+.driver-selection label {
+    margin-right: 10px; /* Add space between label and dropdown */
+}
+
+
+
+
+
